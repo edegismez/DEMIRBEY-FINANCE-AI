@@ -69,6 +69,10 @@ jobs:
           [System.IO.File]::WriteAllBytes($iconPath, $stream.ToArray())
           $writer.Dispose()
           $stream.Dispose()
+          $configPath = "Ortak-Uygulama-Kodu/src-tauri/tauri.conf.json"
+          $config = Get-Content $configPath -Raw | ConvertFrom-Json
+          $config.bundle | Add-Member -NotePropertyName icon -NotePropertyValue @("icons/icon.ico") -Force
+          $config | ConvertTo-Json -Depth 100 | Set-Content -Encoding utf8 $configPath
 
       - name: Build and attach Windows installers
         uses: tauri-apps/tauri-action@v1
