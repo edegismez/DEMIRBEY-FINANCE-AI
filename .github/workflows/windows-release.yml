@@ -34,6 +34,42 @@ jobs:
         run: npm ci
         working-directory: Ortak-Uygulama-Kodu
 
+      - name: Create required Windows icon
+        shell: pwsh
+        run: |
+          $iconPath = "Ortak-Uygulama-Kodu/src-tauri/icons/icon.ico"
+          New-Item -ItemType Directory -Force -Path (Split-Path $iconPath) | Out-Null
+          $stream = [System.IO.MemoryStream]::new()
+          $writer = [System.IO.BinaryWriter]::new($stream)
+          $writer.Write([UInt16]0)
+          $writer.Write([UInt16]1)
+          $writer.Write([UInt16]1)
+          $writer.Write([byte]32)
+          $writer.Write([byte]32)
+          $writer.Write([byte]0)
+          $writer.Write([byte]0)
+          $writer.Write([UInt16]1)
+          $writer.Write([UInt16]32)
+          $writer.Write([UInt32]4264)
+          $writer.Write([UInt32]22)
+          $writer.Write([UInt32]40)
+          $writer.Write([Int32]32)
+          $writer.Write([Int32]64)
+          $writer.Write([UInt16]1)
+          $writer.Write([UInt16]32)
+          $writer.Write([UInt32]0)
+          $writer.Write([UInt32]4096)
+          $writer.Write([Int32]0)
+          $writer.Write([Int32]0)
+          $writer.Write([UInt32]0)
+          $writer.Write([UInt32]0)
+          for ($i = 0; $i -lt 1024; $i++) { $writer.Write([byte[]](125, 70, 30, 255)) }
+          for ($i = 0; $i -lt 128; $i++) { $writer.Write([byte]0) }
+          $writer.Flush()
+          [System.IO.File]::WriteAllBytes($iconPath, $stream.ToArray())
+          $writer.Dispose()
+          $stream.Dispose()
+
       - name: Build and attach Windows installers
         uses: tauri-apps/tauri-action@v1
         env:
