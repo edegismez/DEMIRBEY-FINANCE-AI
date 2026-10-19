@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Demirbey.Domain/Demirbey.Domain.csproj" />
+    <Project Path="src/Demirbey.Application/Demirbey.Application.csproj" />
+    <Project Path="src/Demirbey.Infrastructure/Demirbey.Infrastructure.csproj" />
+    <Project Path="src/Demirbey.Api/Demirbey.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Demirbey.Tests/Demirbey.Tests.csproj" />
+  </Folder>
+</Solution>

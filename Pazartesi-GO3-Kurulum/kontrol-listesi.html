@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><title>Pazartesi – Logo GO 3 bağlantı kontrol listesi</title>
+<style>
+@page{size:A4;margin:14mm 14mm 16mm}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font:10.5pt/1.5 "Segoe UI",-apple-system,Arial,sans-serif;color:#1b2433;margin:0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:3px solid #0f2a5c;padding-bottom:8px;margin-bottom:12px}
+.head img{height:42px}.head b{font-size:15pt;color:#0f2a5c}
+h2{font-size:12.5pt;color:#0f2a5c;margin:14px 0 6px;border-left:4px solid #c9a227;padding-left:8px}
+ol,ul{margin:4px 0 6px;padding-left:20px}li{margin:3px 0}
+.box{border:1px solid #d5dce8;background:#f7f9fc;padding:8px 10px;margin:6px 0}
+.warn{border-left:4px solid #c62828;background:#fdf3f3;padding:7px 10px;margin:8px 0}
+.chk{display:inline-block;width:13px;height:13px;border:1.5px solid #0f2a5c;margin-right:6px;vertical-align:-2px}
+table{width:100%;border-collapse:collapse;font-size:9.8pt;margin:4px 0}td,th{border:1px solid #d5dce8;padding:5px 7px;text-align:left}th{background:#0f2a5c;color:#fff}
+td.blank{height:24px}
+code{background:#eef2f8;padding:0 4px}
+</style></head><body>
+<div class="head"><img src="../Prototip/assets/logo-yatay.png" alt="Demirbey"><div style="text-align:right"><b>Pazartesi – Logo GO 3 bağlantı kontrol listesi</b><br><span style="color:#5f6b80">DEMİRBEY FINANCE AI · şirketteki Windows bilgisayarda yapılacaklar</span></div></div>
+
+<div class="box"><b>Amaç:</b> Logo GO 3'ün kurulu olduğu SQL Server'a <b>yalnızca okuma</b> yetkisiyle bağlanmak ve uygulamanın kullanacağı tabloları doğrulamak. Bu işlemlerin hiçbiri Logo'daki kayıtları değiştirmez. Toplam süre yaklaşık 30–45 dakika.</div>
+
+<h2>1. Önce öğrenin ve not edin</h2>
+<table>
+  <tr><th style="width:45%">Bilgi</th><th>Nereden</th><th style="width:28%">Not</th></tr>
+  <tr><td>Logo GO 3 sürümü</td><td>Logo GO 3 → Yardım → Hakkında</td><td class="blank"></td></tr>
+  <tr><td>SQL Server adı (ör. <code>.\LOGO</code>, <code>BILGISAYAR\SQLEXPRESS</code>)</td><td>Logo bayiniz veya bilgi işlem; ya da keşif aracı bu bilgisayardaki SQL servislerini listeler</td><td class="blank"></td></tr>
+  <tr><td>Logo veritabanı adı</td><td>Keşif aracı veritabanlarını listeler</td><td class="blank"></td></tr>
+  <tr><td>Firma no (3 hane) ve dönem no (2 hane)</td><td>Logo'ya girişte firma / dönem seçim ekranı; araç da listeler</td><td class="blank"></td></tr>
+  <tr><td>SQL yönetici hesabı (sa veya bayinin verdiği)</td><td>Logo bayisi / bilgi işlem – <b>şifreyi kimseyle paylaşmayın, Claude dahil</b></td><td class="blank"></td></tr>
+  <tr><td>Logo Objects lisansı var mı? (ileride Logo'ya yazmak için, şimdilik gerekmez)</td><td>Logo bayisi</td><td class="blank"></td></tr>
+</table>
+
+<h2>2. Adımlar</h2>
+<ol>
+  <li><span class="chk"></span><b>Yedek:</b> Logo veritabanının güncel yedeği alınmış olsun (bayi / bilgi işlem).</li>
+  <li><span class="chk"></span>Bu klasörü (<b>Pazartesi-GO3-Kurulum</b>) USB veya e-postayla Logo'nun kurulu olduğu bilgisayara kopyalayın.</li>
+  <li><span class="chk"></span><b>Salt okunur kullanıcı:</b> SQL Server Management Studio'yu yönetici hesabıyla açın → <code>2-Salt-Okunur-Kullanici-Olustur.sql</code> dosyasını açın → içindeki <code>&lt;LOGO_DB&gt;</code> yerine veritabanı adını, <code>&lt;GUCLU_PAROLA&gt;</code> yerine sizin belirleyeceğiniz güçlü bir şifreyi yazın → <b>Execute</b>. (SSMS yoksa bu adımı Logo bayinize yaptırın.)</li>
+  <li><span class="chk"></span><b>Keşif:</b> <code>1-Calistir.bat</code> dosyasına çift tıklayın. Sırasıyla SQL Server adı, giriş türü (<b>H</b> seçip <code>demirbey_ro</code> ve 3. adımdaki şifre), veritabanı, firma no ve dönem no sorulur.</li>
+  <li><span class="chk"></span>Ekranda <b>"Kullanıcı yalnızca okuma yetkili ✓"</b> yazısını görün. "DİKKAT: yazma yetkisi var" çıkarsa 3. adımı kontrol edin.</li>
+  <li><span class="chk"></span>Klasörde oluşan <code>Logo-Kesif-TARİH.zip</code> dosyasını bu sohbete gönderin. İçinde <b>şifre, müşteri veya çek kaydı yoktur</b>; yalnızca tablo adları, satır sayıları ve durum kodu dağılımları vardır. Göndermeden önce açıp bakabilirsiniz.</li>
+</ol>
+<div class="warn">Windows "bu dosya tanınmıyor" uyarısı verirse: dosyaya sağ tıklayın → Özellikler → "Engellemeyi kaldır" → Tamam. <code>1-Calistir.bat</code> yalnızca bu araç için PowerShell çalıştırır, bilgisayarın güvenlik ayarlarını değiştirmez.</div>
+
+<h2>3. Uygulama sunucusu nerede çalışacak? (karar verin)</h2>
+<ul>
+  <li><b>Seçenek A – Logo'nun kurulu olduğu Windows bilgisayar:</b> en basit başlangıç; bilgisayar mesai dışında da açık kalmalı.</li>
+  <li><b>Seçenek B – Şirket ağında ayrı bir Windows bilgisayar / sunucu:</b> daha sağlıklı; SQL Server'a ağ erişimi (port 1433) açılır.</li>
+  <li>Mac ve iPad'den ofis dışında erişim için: sabit IP veya VPN (bilgi işlem / internet sağlayıcınız).</li>
+</ul>
+
+<h2>4. Siz zip'i gönderdikten sonra benim yapacaklarım</h2>
+<ol>
+  <li>Logo'daki çek durum kodlarını uygulamanın renk ve kategorilerine eşlemek (ödenecek, tahsilatta, portföy, iskonto / teminat).</li>
+  <li>Firma, dönem ve tablo adlarına göre gerçek okuma sorgularını kesinleştirmek.</li>
+  <li>Sunucuyu sizin bilgisayarınızda kurmak için adım adım kurulum dosyası hazırlamak.</li>
+  <li>İlk canlı ekranları açmak: Çek Takibi, cariler, stok; ardından nakit akışı ve raporlar.</li>
+</ol>
+<p style="color:#5f6b80;font-size:9pt;margin-top:12px">Not: Bu araçların hiçbiri Logo'ya kayıt yazmaz. Kullanıcı yalnızca okuma yetkilidir ve araç da yalnızca okuma sorgularına izin verir.</p>
+</body></html>

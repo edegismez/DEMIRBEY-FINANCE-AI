@@ -1,0 +1,144 @@
+# Demirbey Kimya ürün kataloğu – www.demirbeykimya.com/urunler (18.10.2026 itibarıyla, 141 benzersiz ürün)
+# Biçim: GRUP | Ürün adı | Ambalaj
+# Not: Gerçek stok kodları ve miktarları Logo GO 3 (LG_xxx_ITEMS / STLINE) üzerinden gelir; bu liste prototip ve isim eşleştirmesi içindir.
+TUZLAR|Alüminyum Sülfat|Paletli sevkiyat; çuval.
+ALKALİLER|Amonyak Sıvı %25|%25 · Tanker, IBC ve bidon.
+TUZLAR|Amonyum Klorür|25 kg · Paletli sevkiyat; 25 kg çuval.
+TUZLAR|Amonyum Persülfat|Katı oksitleyici · Palet / Çuval
+SU ARITMA|Antiskalant|IBC ve bidon.
+TEMİZLİK ÜRÜNLERİ|Arap Sabunu|16 kg kova / 16 kg teneke
+ASİTLER|Asetik Asit|%80 sulu çözelti · Tanker / IBC / Bidon
+SOLVENTLER|Aseton|Büyük varil ve bidon.
+YÜZEY İŞLEM|Asit İnhibitörü|25 kg · 25 kg bidon.
+YÜZEY İŞLEM|Asitik Yağ Alma|Bidon.
+YÜZEY İŞLEM|Asitli Çinko Parlatıcı|25 kg · 25 kg bidon.
+YÜZEY İŞLEM|Asitli Çinko Taşıyıcı Kuruluş|25 kg · 25 kg bidon.
+TUZLAR|Bakır Siyanür|Küçük varil.
+TUZLAR|Bakır Sülfat|Paletli sevkiyat; 25 kg çuval.
+TUZLAR|Baryum Karbonat|Paletli sevkiyat; 25 kg çuval.
+TUZLAR|Baryum Klorür|Paletli sevkiyat; 25 kg çuval.
+YÜZEY AKTİFLER|Betain|Büyük plastik varil ve bidon.
+ALKALİLER|Boncuk Kostik / Sodyum Hidroksit|Paletli sevkiyat ve çuval.
+TUZLAR|Boraks|Paletli sevkiyat ve çuval.
+ASİTLER|Borik Asit|Paletli sevkiyat ve çuval.
+GLİKOLLER|Bütil Glikol|Varil.
+TEMİZLİK ÜRÜNLERİ|Cam Temizleyici / Camsil|IBC ve bidon.
+YÜZEY AKTİFLER|Comperland / Comperlan|Varil ve bidon.
+METAL VE YARDIMCILAR|Çinko Anot|25 kg külçe.
+TUZLAR|Çinko Klorür|Paletli sevkiyat; 25 kg çuval.
+TUZLAR|Çinko Oksit|Paletli sevkiyat; 25 kg çuval.
+TUZLAR|Çinko Sülfat|Paletli sevkiyat; 25 kg çuval.
+TUZLAR|Demir Sülfat|25 kg · 25 kg çuval.
+TUZLAR|Demir(III) Klorür|Tanker, IBC ve bidon.
+SOLVENTLER|Deri Kimyasalı / Denatüre Metanol|IBC ve varil.
+YÜZEY AKTİFLER|EDTA / Dissolvine|Paletli sevkiyat; 25 kg çuval.
+YÜZEY İŞLEM|Elektrikli Yağ Alma|Paletli sevkiyat; 25 kg çuval.
+SOLVENTLER|Etil Asetat|Varil ve bidon.
+YÜZEY İŞLEM|Flaks / Fluks · Çinko Amonyum Klorür Double Salt|Paletli sevkiyat; 25 kg çuval.
+ORGANİK KİMYASALLAR|Formaldehit|IBC ve bidon.
+ASİTLER|Formik Asit|IBC ve bidon.
+ASİTLER|Fosforik Asit %75|%75 · Tanker, IBC ve bidon.
+ASİTLER|Fosforik Asit %85|%85 · Tanker, IBC ve bidon.
+ASİTLER|Glacial Asetik Asit|Glacial · Sadece IBC
+YAĞLAR VE MUMLAR|Gliserin|IBC, varil ve bidon.
+ALKALİLER|Hafif Soda / Sodyum Karbonat|Bigbag içinde 25 kg çuvallar; ayrıca tek 25 kg çuval.
+SU VE HAVUZ|Havuz Çöktürücü|Bidon.
+SU VE HAVUZ|Havuz Kimyasalı Taşıyıcı|Bidon.
+SU VE HAVUZ|Havuz Kimyasalı Yosun Önleyici|Bidon.
+SU VE HAVUZ|Havuz Parlatıcı|Bidon.
+SU ARITMA|HEDP|IBC, varil ve bidon.
+ORGANİK KİMYASALLAR|Hegzamin|Paletli sevkiyat; 25 kg çuval.
+ASİTLER|Hidroflorik Asit %35|%35 · IBC ve bidon.
+ASİTLER|Hidroflorik Asit %70|%70 · IBC ve bidon.
+OKSİTLEYİCİLER|Hidrojen Peroksit %50|Tanker, IBC ve bidon.
+ASİTLER|Hidroklorik Asit|%33 sulu çözelti · Tanker / IBC / Bidon
+ASİTLER|Hidroklorik Asit İnhibitörlü|Sadece IBC.
+YAĞLAR VE MUMLAR|Hint Yağı / Castor Oil|Varil.
+SOLVENTLER|İzopropil Alkol / IPA|Büyük varil ve bidon.
+TUZLAR|Kalsiyum Klorür|Bigbag ve 25 kg çuval.
+TUZLAR|Kalsiyum Nitrat|Paletli sevkiyat; 25 kg çuval.
+DETERJAN HAMMADDELERİ|Kıvamlaştırıcı|Bidon.
+TEMİZLİK ÜRÜNLERİ|Kolonya|IBC, varil ve bidon.
+YÜZEY AKTİFLER|Köpük Kesici / Antifoam|Bidon.
+YÜZEY AKTİFLER|Köpük Kesici / Foamer B100|Bidon.
+TUZLAR|Krom Şap|Paletli sevkiyat; 25 kg çuval.
+OKSİTLEYİCİLER|Kromik Asit|25 kg · 25 kg küçük fıçı.
+ADSORBAN VE MİNERALLER|Kükürt|Paletli sevkiyat; 25 kg çuval.
+LABORATUVAR|Laboratuvar Kimyasalları ve Sarf Malzemeleri|Laboratuvar kimyasalları, cam malzemeler ve sarf malzemeleri.
+YÜZEY AKTİFLER|LABSA|IBC ve varil.
+TUZLAR|Magnezyum Sülfat|Paletli sevkiyat; 25 kg çuval.
+TUZLAR|Mangan Sülfat|Paletli sevkiyat; 25 kg çuval.
+YÜZEY İŞLEM|Mavi Pasivasyon Cr(III)|Bidon.
+YÜZEY İŞLEM|Mavi Pasivasyon Cr(VI)|Bidon.
+YÜZEY İŞLEM|Mavi Pasivasyon Toz|Kova.
+SOLVENTLER|Metil Etil Keton / M.E.K.|Varil.
+SOLVENTLER|Metilen Klorit / Diklorometan|Varil.
+AMİNLER|Monoetanolamin|IBC ve varil.
+GLİKOLLER|Monoetilen Glikol (MEG)|IBC ve varil.
+GLİKOLLER|Monopropilen Glikol (MPG)|Varil.
+ASİTLER|Nitrik Asit|Tanker, IBC ve bidon.
+YÜZEY AKTİFLER|Noniyonik NP-4|Varil.
+YÜZEY AKTİFLER|Noniyonik NP-6|Varil.
+YÜZEY AKTİFLER|Noniyonik NP-10|Varil.
+ASİTLER|Oksalik Asit|Paletli sevkiyat; 25 kg çuval.
+SOLVENTLER|Perkloretilen|Varil.
+SU VE HAVUZ|pH Düşürücü Havuz Kimyasalı|Bidon ve 25 kg çuval.
+SU VE HAVUZ|pH Düşürücü Sıvı|Bidon.
+SU VE HAVUZ|pH Düşürücü Toz|25 kg · 25 kg çuval.
+ALKALİLER|Potasyum Hidroksit|Paletli sevkiyat; 25 kg çuval.
+TUZLAR|Potasyum Klorür|25 kg · Paletli sevkiyat; 25 kg çuval.
+OKSİTLEYİCİLER|Potasyum Permanganat|25 kg · 25 kg fıçı.
+SU VE HAVUZ|Saf Su|IBC ve bidon.
+TUZLAR|Sanayi Tuzu Tablet|Palet ve çuval.
+YÜZEY İŞLEM|Sarı Pasivasyon Boyası / Kempas TYB|Varil.
+YÜZEY İŞLEM|Sarı Pasivasyon Cr(III)|Bidon.
+YÜZEY İŞLEM|Sarı Pasivasyon Cr(VI)|Bidon.
+YÜZEY İŞLEM|Sarı Pasivasyon Toz|Kova.
+YÜZEY İŞLEM|Sıcak Yağ Alma|Paletli sevkiyat ve çuval.
+TEMİZLİK ÜRÜNLERİ|Sıvı Deterjan · Renkli ve Kokulu|IBC ve bidon.
+TEMİZLİK ÜRÜNLERİ|Sıvı Deterjan · Renksiz ve Kokusuz|IBC ve bidon.
+TEMİZLİK ÜRÜNLERİ|Sıvı El Sabunu|IBC ve bidon.
+OKSİTLEYİCİLER|Sıvı Klor / Sodyum Hipoklorit|Tanker, IBC ve bidon.
+ALKALİLER|Sıvı Kostik|Tanker, IBC ve bidon.
+ASİTLER|Sitrik Asit|Paletli sevkiyat; 25 kg çuval.
+YÜZEY İŞLEM|Siyanürlü Çinko Parlatıcı|Bidon.
+TUZLAR|Sodyum Asetat|Palet ve çuval.
+TUZLAR|Sodyum Benzoat|Paletli sevkiyat; 25 kg çuval.
+TUZLAR|Sodyum Bikarbonat / Teknik|Bigbag içinde 25 kg çuvallar; ayrıca tek 25 kg çuval.
+TUZLAR|Sodyum Bikarbonat Gıda|Bigbag içinde 25 kg çuvallar; ayrıca tek 25 kg çuval.
+OKSİTLEYİCİLER|Sodyum Bikromat / Dikromat|Paletli sevkiyat; çuval.
+TUZLAR|Sodyum Bisülfat|Paletli sevkiyat; 25 kg çuval.
+TUZLAR|Sodyum Heksametafosfat / SHMP / Calgon T|Paletli sevkiyat; 25 kg çuval.
+ALKALİLER|Sodyum Hidroksit (Payet Kostik)|Paletli sevkiyat; 25 kg çuval.
+ALKALİLER|Sodyum Hidroksit / Sıvı Kostik|Tanker, IBC ve bidon.
+İNDİRGENLER|Sodyum Hidrosülfit / Ditiyonit|25 kg ve 50 kg varil.
+OKSİTLEYİCİLER|Sodyum Hipoklorit|Tanker, IBC ve bidon.
+ALKALİLER|Sodyum Karbonat (Ağır Soda)|Paletli sevkiyat; 25 kg çuval.
+OKSİTLEYİCİLER|Sodyum Klorat|Paletli sevkiyat; çuval.
+TUZLAR|Sodyum Klorit|Plastik varil ve bidon.
+TUZLAR|Sodyum Klorür / Sanayi Tuzu Toz|Paletli sevkiyat ve çuval.
+İNDİRGENLER|Sodyum Metabisülfit|Paletli sevkiyat ve çuval.
+ALKALİLER|Sodyum Metasilikat|Paletli sevkiyat ve çuval.
+TUZLAR|Sodyum Molibdat|Çuval ve dökme.
+TUZLAR|Sodyum Nitrat|Paletli sevkiyat; çuval.
+TUZLAR|Sodyum Nitrit|Paletli sevkiyat; çuval.
+TUZLAR|Sodyum Perkarbonat|Palet ve kraft çuval.
+TUZLAR|Sodyum Persülfat|Palet ve çuval.
+ALKALİLER|Sodyum Silikat|Tanker, IBC ve bidon.
+TUZLAR|Sodyum Siyanür|50 kg varil.
+TUZLAR|Sodyum Sülfat|Bigbag ve 25 kg çuval.
+İNDİRGENLER|Sodyum Sülfür / Zırnık|Paletli sevkiyat; çuval.
+İNDİRGENLER|Sodyum Tiyosülfat|Paletli sevkiyat; çuval.
+TUZLAR|Sodyum Tripolifosfat / STPP|Paletli sevkiyat; çuval.
+ASİTLER|Sülfamik Asit|Palet ve kraft çuval.
+ASİTLER|Sülfürik Asit %50|%50 · Tanker / IBC / Bidon
+ASİTLER|Sülfürik Asit %98,52|Tanker, IBC ve bidon.
+ADSORBAN VE MİNERALLER|Talk Pudra|25 kg · 25 kg çuval.
+ASİTLER|Taş Asidi|IBC ve bidon.
+YÜZEY AKTİFLER|Teksapon / SLES|Plastik varil.
+TEMİZLİK ÜRÜNLERİ|Toz Deterjan|Paletli sevkiyat veya 20 kg torba.
+OKSİTLEYİCİLER|Toz Klor %56|%56 · 50 kg karton varil.
+OKSİTLEYİCİLER|Toz Klor %90|%90 · 50 kg karton varil.
+SOLVENTLER|Trikloretilen|Varil.
+TUZLAR|Trisodyum Fosfat / TSP|Paletli sevkiyat; çuval.
+TEMİZLİK ÜRÜNLERİ|Yüzey Temizleyici|IBC ve bidon.

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "DEMIRBEY FINANCE AI",
+  "version": "0.1.0",
+  "identifier": "com.demirbey.financeai",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "windows": [{ "title": "DEMİRBEY FINANCE AI", "width": 1440, "height": 900, "minWidth": 1100, "minHeight": 700 }],
+    "security": { "csp": "default-src 'self'; connect-src 'self' http://localhost:5080 https://*.demirbey.local; style-src 'self' 'unsafe-inline'" }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis", "dmg", "app"],
+    "windows": { "webviewInstallMode": { "type": "embedBootstrapper" } }
+  }
+}

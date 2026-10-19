@@ -1,0 +1,14 @@
+node_modules/
+dist/
+bin/
+obj/
+src-tauri/target/
+*.user
+appsettings.*.local.json
+
+# Geçici ve yerel dosyalar (banka belgeleri, sistem dosyaları)
+_gecici/
+.DS_Store
+.claude/
+*.zip
+Logo-Kesif-*/

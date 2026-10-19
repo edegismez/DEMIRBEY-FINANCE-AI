@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>DEMİRBEY FINANCE AI – Kullanım Kılavuzu</title>
+<style>
+@page{size:A4;margin:16mm 14mm 18mm;@bottom-left{content:"DEMİRBEY FINANCE AI · Kullanım Kılavuzu";font:8.5px "Segoe UI",sans-serif;color:#5f6b80}@bottom-right{content:"Sayfa " counter(page) " / " counter(pages);font:8.5px "Segoe UI",sans-serif;color:#5f6b80}}
+@page:first{@bottom-left{content:none}@bottom-right{content:none}}
+*{box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font:10.5pt/1.5 "Segoe UI",-apple-system,Helvetica,Arial,sans-serif;color:#1b2433;margin:0}
+h1{font-size:22pt;color:#0f2a5c;margin:0 0 6px}
+h2{font-size:15pt;color:#0f2a5c;border-bottom:2.5px solid #0f2a5c;padding-bottom:4px;margin:0 0 10px;break-after:avoid}
+h3{font-size:11.5pt;color:#0f2a5c;margin:12px 0 4px;break-after:avoid}
+p{margin:4px 0 8px}ul,ol{margin:4px 0 8px;padding-left:20px}li{margin:2px 0}
+.page{break-before:page}
+.cover{height:250mm;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:0 10mm}
+.cover img{width:260px;margin-bottom:28px}
+.cover .t{font-size:30pt;font-weight:800;color:#0f2a5c;line-height:1.1}
+.cover .s{font-size:14pt;color:#c9a227;letter-spacing:5px;font-weight:700;margin:8px 0 26px}
+.cover .m{color:#5f6b80;font-size:10.5pt;line-height:1.8;border-left:4px solid #c9a227;padding-left:12px}
+.shot{width:100%;border:1px solid #c9d2e0;margin:6px 0 8px;display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{border:1px solid #d5dce8;border-top:3px solid #0f2a5c;padding:8px 10px;background:#f7f9fc;break-inside:avoid}
+.box b{color:#0f2a5c}
+.note{border-left:4px solid #c9a227;background:#fdf9ec;padding:7px 10px;margin:8px 0;break-inside:avoid}
+.warn{border-left:4px solid #c62828;background:#fdf3f3;padding:7px 10px;margin:8px 0;break-inside:avoid}
+table{width:100%;border-collapse:collapse;margin:6px 0 10px;font-size:9.5pt}
+th{background:#0f2a5c;color:#fff;text-align:left;padding:5px 7px;font-weight:600}
+td{border:1px solid #d5dce8;padding:5px 7px;vertical-align:top}
+tr:nth-child(even) td{background:#fafbfd}
+tr{break-inside:avoid}
+.tag{display:inline-block;padding:0 6px;font-size:8.5pt;font-weight:700;color:#fff}
+.sec-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 6px}
+.toc li{margin:3px 0}
+.compact{font-size:9.5pt}.compact table{font-size:8.6pt;margin:4px 0 6px}.compact td,.compact th{padding:3px 6px}.compact h3{margin:6px 0 2px}.compact .note{margin:4px 0}
+.k{display:inline-block;min-width:14px;height:12px;vertical-align:-1px;margin-right:4px;border:1px solid rgba(0,0,0,.15)}
+</style>
+</head>
+<body>
+
+<!-- KAPAK -->
+<div class="cover">
+  <img src="../Prototip/assets/logo-yatay.png" alt="Demirbey Kimya Sanayi">
+  <div class="t">DEMİRBEY FINANCE AI</div>
+  <div class="s">KULLANIM KILAVUZU</div>
+  <div class="m">
+    Logo GO 3 entegre finans, çek, kredi, kart, stok ve maliyet yönetimi<br>
+    Sürüm: Prototip · 18.10.2026<br>
+    Hazırlayan: Claude (Anthropic) · Demirbey Kimya için<br>
+    Bu kılavuz onaylanan prototip üzerinden hazırlanmıştır; ekranlardaki bazı rakamlar örnektir (bkz. Bölüm 8).
+  </div>
+</div>
+
+<!-- İÇİNDEKİLER -->
+<div class="page">
+<h2>İçindekiler</h2>
+<ol class="toc">
+  <li>Genel bakış: ekran düzeni, veri kaynakları, renkler</li>
+  <li>Günlük, haftalık, aylık ve yıl sonu kullanım rutini</li>
+  <li>Ekranlar – özet bölümü: Ana Panel, Raporlar (haftalık · aylık · yıllık), Nakit Akışı</li>
+  <li>Ekranlar – çek, müşteri ve tedarikçi: Çek Takibi, Müşteri Limit &amp; Risk, Tedarikçi Ödemeleri</li>
+  <li>Ekranlar – banka ve kartlar: Bankalar &amp; Limitler, Banka Kredileri, Finansman Giderleri, Kredi Kartları</li>
+  <li>Ekranlar – ürün ve stok: Ürün &amp; Maliyet, Stok Eşikleri</li>
+  <li>Ekranlar – bildirim, asistan, kişisel ve ayarlar: WhatsApp, Google Takvim, AI Asistanı, Yatırım Kasası, Kullanıcılar &amp; Güvenlik</li>
+  <li><b>Benzer işler yapan ekranlar ve sadeleştirme önerisi</b></li>
+  <li>Prototipteki gerçek ve örnek veriler, canlıya geçiş</li>
+</ol>
+
+<h2 style="margin-top:22px">1. Genel bakış</h2>
+<h3>Ekran düzeni</h3>
+<ul>
+  <li><b>Sol menü (lacivert):</b> bütün ekranlar. Uygulamayı yalnızca Ercan Değişmez ve Aynil Değişmez kullanır; ikisi de bütün ekranları görür.</li>
+  <li><b>Üst çubuk:</b> sayfa başlığı ve <b>🖨 Yazdır</b> (her sayfa kurumsal başlıklı A4 olarak yazdırılır veya PDF'e kaydedilir).</li>
+  <li><b>Arama kutuları:</b> ilgili ekranların içinde: Müşteri Limit &amp; Risk (Müşteri seç), Tedarikçi Ödemeleri (Tedarikçi bul), Çek Takibi (firma / çek no), Ürün &amp; Maliyet ve Stok Eşikleri. Türkçe karakter ve büyük/küçük harf farkı önemli değildir ("ipa" = "İPA").</li>
+</ul>
+<h3>Veri nereden gelir?</h3>
+<table>
+  <tr><th style="width:28%">Kaynak</th><th>Örnekler</th></tr>
+  <tr><td><b>Logo GO 3 (otomatik, salt okunur)</b></td><td>Çekler ve çek hareketleri, cari bakiyeler, faturalar, stok giriş/çıkışları, banka hareketleri. Uygulama Logo'ya hiçbir şey yazmaz.</td></tr>
+  <tr><td><b>Sizin girişleriniz</b></td><td>Kredi kartı tanımları ve ekstreleri, müşteri limitleri, stok eşikleri, KMH limitleri, finansman giderleri, alacak zararları, yatırım kasası.</td></tr>
+  <tr><td><b>Dosya ile içe aktarma</b></td><td>Findeks Risk Raporu (PDF), banka kredi ödeme planı (PDF / Excel / kopyala-yapıştır).</td></tr>
+  <tr><td><b>Dış kaynaklar</b></td><td>TCMB döviz kurları, altın/gümüş fiyatları (Harem – izin/anlaşma gerekir), Google Takvim, WhatsApp.</td></tr>
+</table>
+<h3>Renkler</h3>
+<table>
+  <tr><th>Nerede</th><th>Anlamı</th></tr>
+  <tr><td>Çekler</td><td><span class="k" style="background:#c62828"></span>Ödenecek (yanında banka rengi: Halkbank mavi, Yapı Kredi lacivert, QNB mor, Vakıfbank sarı, Şekerbank açık sarı, TEB koyu yeşil, İş Bankası siyah) · <span class="k" style="background:#15803d"></span>Tahsilatta · <span class="k" style="background:#1d4ed8"></span>Portföyde · <span class="k" style="background:#6b7280"></span>İskonto / teminat</td></tr>
+  <tr><td>Kredi kartları</td><td><span class="k" style="background:#0f2a5c"></span>7 günden fazla · <span class="k" style="background:#b88a00"></span>7 gün · <span class="k" style="background:#d9620b"></span>3 gün · <span class="k" style="background:#c62828"></span>son gün/yarın · <span class="k" style="background:#7f1d1d"></span>gecikti · <span class="k" style="background:#15803d"></span>ödendi · <span class="k" style="background:#8a94a6"></span>ekstre girilmedi</td></tr>
+  <tr><td>Stok / müşteri</td><td><span class="k" style="background:#15803d"></span>Yeterli / satış açık · <span class="k" style="background:#d9620b"></span>Alım yap / uyarı · <span class="k" style="background:#c62828"></span>Stok riskinde / satışı durdur</td></tr>
+</table>
+</div>
+
+<!-- RUTİN -->
+<div class="page">
+<h2>2. Kullanım rutini</h2>
+<div class="grid2">
+  <div class="box"><b>Her sabah (5 dakika)</b><ol>
+    <li><b>Ana Panel:</b> kırmızı uyarı var mı (nakit açığı, limit aşımı)?</li>
+    <li><b>Raporlar → Haftalık:</b> bugünün ve yarının ödemeleri, tahsilatları.</li>
+    <li><b>Kredi Kartları:</b> sarı/turuncu/kırmızı kart var mı?</li>
+    <li>WhatsApp'a gelen hatırlatmaları "Ödendi" ile kapatın.</li></ol></div>
+  <div class="box"><b>Her pazartesi</b><ol>
+    <li>08:00'de gelen haftalık WhatsApp raporuna bakın.</li>
+    <li><b>Müşteri Limit &amp; Risk:</b> "satışı durdur" olan müşteriler.</li>
+    <li><b>Stok Eşikleri:</b> "Stok riskinde" ve "Alım yap" filtreleri.</li>
+    <li>Ekstresi girilmemiş kart hatırlatması geldiyse ekstreyi girin.</li></ol></div>
+  <div class="box"><b>Her ay</b><ol>
+    <li>Yeni <b>Findeks raporu</b>nu yükleyin (Bankalar &amp; Limitler) ve farkları kontrol edin.</li>
+    <li>Yeni kredi kullandıysanız <b>ödeme planını içe aktarın</b> (Banka Kredileri).</li>
+    <li>İskonto kesintilerini <b>Finansman Giderleri</b>'ne girin.</li>
+    <li>Revize vadesi yaklaşan bankalarla görüşün.</li></ol></div>
+  <div class="box"><b>Çeyrek ve yıl sonu</b><ol>
+    <li>31.03 / 30.06 / 30.09 / 31.12: <b>KMH devre sonu faizlerini</b> girin.</li>
+    <li>Konkordato / iflas / karşılıksız alacakları güncelleyin.</li>
+    <li>Yıl sonunda <b>Finansman Giderleri</b> raporunu yazdırıp muhasebecinizle paylaşın.</li>
+    <li>Müşteri limitlerini ve risk sınıflarını gözden geçirin.</li></ol></div>
+</div>
+</div>
+
+<!-- 3. ÖZET -->
+<div class="page">
+<h2>3.1 Ana Panel</h2>
+<img class="shot" src="kilavuz-gorseller/panel.jpg">
+<p><b>Ne işe yarar:</b> Önümüzdeki 30 günün ticari özetini tek bakışta verir: ödeme, beklenen tahsilat, net nakit, çek portföyü dağılımı, yaklaşan ödeme ve tahsilatlar.</p>
+<ul>
+  <li><b>Kırmızı şerit:</b> nakit açığı oluşacak ilk gün ve tutarı. KMH limitlerini girdiyseniz açığın KMH ile karşılanıp karşılanamayacağı da yazar.</li>
+  <li>Şahsi ödemeler ayrı kutuda gösterilir, ticari nakit akışına <b>eklenmez</b>.</li>
+</ul>
+</div>
+<div class="page">
+<h2>3.2 Raporlar (Haftalık · Aylık · Yıllık)</h2>
+<img class="shot" src="kilavuz-gorseller/rapor.jpg">
+<ul>
+  <li><b>Haftalık:</b> pazartesi–pazar arası <b>gün gün</b> çek tahsilatları, çek / kredi / kart ödemeleri ve o hafta vadesi gelen iskonto / teminat çekleri. Her pazartesi 08:00'de WhatsApp ile gelir.</li>
+  <li><b>Aylık:</b> bu ay / gelecek ay seçimi; aylık toplamlar, <b>hafta hafta dağılım</b>, ayın en büyük 10 ödemesi, ay içinde vadesi gelen iskonto / teminat çekleri. Her ayın 1'i 08:00'de WhatsApp ile özet gelir.</li>
+  <li><b>Yıllık:</b> 12 ayın tahsilat, ödeme ve ticari net tablosu; yanında aylık finansman giderleri ve alacak zararları, en altta yıl toplamları.</li>
+  <li>Her sekme "Yazdır" ile kurumsal başlıklı çıktı olarak alınabilir.</li>
+</ul>
+<h2 style="margin-top:14px">3.3 Nakit Akışı</h2>
+<img class="shot" src="kilavuz-gorseller/nakit.jpg">
+<p><b>Ne işe yarar:</b> 7, 15, 30, 60, 90 ve 180 günlük nakit tahmini. Günlük bakiye çizgisi ve açık oluşan günler. Yalnızca ticari kalemler hesaba girer; beklenen (doğrulanmamış) tahsilatlar ayrı tutulur.</p>
+</div>
+
+<!-- 4. ÇEK / MÜŞTERİ / TEDARİKÇİ -->
+<div class="page">
+<h2>4.1 Çek Takibi</h2>
+<img class="shot" src="kilavuz-gorseller/cek.jpg">
+<p><b>Ne işe yarar:</b> Alınan ve verilen bütün çekler; kategori, vade, kalan gün ve müşteri çeklerinin tutar ağırlıklı ortalama vadesi.</p>
+<ul>
+  <li>Üstteki <b>Firma / çek no</b> kutusuyla arayın; renkli düğmelerle kategori süzün.</li>
+  <li>Her çek yalnızca bir kategoride sayılır; teminat, iskonto ve portföy çekleri nakit gibi hesaplanmaz.</li>
+</ul>
+</div>
+<div class="page">
+<h2>4.2 Müşteri Limit &amp; Risk</h2>
+<img class="shot" src="kilavuz-gorseller/limit.jpg">
+<p><b>Ne işe yarar:</b> Her müşteri için limit ve risk sınıfı (A/B/C/D). <b>Risk = açık cari bakiye + tahsil edilmemiş çekler.</b></p>
+<ul>
+  <li><b>🔍 Müşteri seç:</b> ad veya cari koduyla arayın. Limiti olmayan bir cariye buradan limit tanımlanır.</li>
+  <li>Limit aşılınca veya konkordato/iflas/karşılıksız kaydı varsa <b>SATIŞI DURDUR</b>. Çek tahsil edilip risk düşünce "limit açıldı" bildirimi gelir.</li>
+  <li>Alt bölümde müşterinin <b>fatura bazında vade aşımı</b>, <b>vade farkı hesabı</b>, <b>"Vadesi nasıl geçti?"</b> açıklaması ve <b>proforma fatura</b> var.</li>
+</ul>
+</div>
+<div class="page">
+<h2>4.3 Tedarikçi Ödemeleri</h2>
+<img class="shot" src="kilavuz-gorseller/cari.jpg">
+<p><b>Ne işe yarar:</b> Mal aldığınız firmalara olan borç. <b>Vade günü yazdığınızda</b> (ör. 60 gün), ödemeler en eski faturadan düşülür, kalan faturaların ağırlıklı ortalama tarihine vade eklenir ve <b>önerilen çek / ödeme tarihi</b> çıkar. Müşteriler bu ekranda değil, Müşteri Limit &amp; Risk'tedir.</p>
+
+</div>
+
+<!-- 5. BANKA / KART -->
+<div class="page">
+<h2>5.1 Bankalar &amp; Limitler</h2>
+<img class="shot" src="kilavuz-gorseller/banka.jpg">
+<p><b>Ne işe yarar:</b> Bankaların size tanıdığı <b>limit ve kullandığınız risk</b> (Findeks), genel revize vadeleri, ticari hesaplar, IBAN'lar ve <b>KMH</b>.</p>
+<ul>
+  <li><b>Yeni Findeks raporu yükle:</b> PDF'i seçin veya sürükleyin. Bankalar logolarından tanınır; kaydetmeden önce farklar gösterilir. Eski raporlar "Rapor geçmişi"nde kalır.</li>
+  <li><b>KMH düzenle:</b> her banka için KMH limiti, kullanılan KMH ve aylık faiz oranı. Boş KMH, nakit açığı uyarısında kullanılır.</li>
+  <li>Uyarılar: limit aşımı (ör. İş Bankası), revize vadesi geçmiş / yaklaşan bankalar.</li>
+</ul>
+</div>
+<div class="page">
+<h2>5.2 Banka Kredileri</h2>
+<img class="shot" src="kilavuz-gorseller/kredi.jpg">
+<p><b>Ne işe yarar:</b> Krediler ve taksit planları. Bir bankaya tıklayınca o bankanın kredileri, bir krediye tıklayınca <b>ödenmiş / ödenecek</b> taksit listesi açılır. "Ödendi işaretle" kullanıcı beyanıdır; banka kaydıyla doğrulanır.</p>
+<ul><li><b>📥 Banka ödeme planı içe aktar:</b> PDF, Excel veya internet bankacılığından kopyalanan liste. Sütunlar otomatik tanınır; "taksit = anapara + faiz + vergiler" tutmayan satırlar işaretlenir; yanlış sütunu açılır listeden düzeltirsiniz.</li></ul>
+</div>
+<div class="page">
+<h2>5.3 Finansman Giderleri ve Alacak Zararları</h2>
+<img class="shot" src="kilavuz-gorseller/fgider.jpg">
+<ul>
+  <li><b>İskonto kesintileri:</b> çek tutarı, kesinti, net; çek vadesi girilirse <b>yıllık efektif maliyet</b> (bankaları karşılaştırmak için).</li>
+  <li><b>KMH 3 aylık devre sonu faizleri, kredi faizleri, komisyonlar</b> (BSMV/KKDF dahil). İçe aktarılan ödeme planlarının faizleri otomatik gelir.</li>
+  <li><b>Nereden girilir:</b> sayfanın üstündeki <b>"+ Gider ekle"</b> (tür, tarih, banka, tutarlar) ve aşağıdaki <b>"+ Alacak zararı ekle"</b>. Muhasebe bu giderleri Logo'da 780 hesabına işliyorsa canlı sistemde Logo'dan otomatik okunur; elle giriş yalnızca Logo'da olmayanlar için kalır.</li>
+  <li><b>Alacak zararları:</b> konkordato, iflas, karşılıksız çek, ödenmeyen senet; alacak, tahsil edilen, zarar ve durum. Kayıtlı müşteri otomatik "satışı durdur" olur.</li>
+  <li><b>Yıl sonu raporu:</b> aylık grafik, banka bazında özet, finansman gideri + alacak zararı toplamı. Yazdırıp muhasebecinizle paylaşın.</li>
+</ul>
+</div>
+<div class="page">
+<h2>5.4 Kredi Kartları</h2>
+<img class="shot" src="kilavuz-gorseller/kart.jpg">
+<ul>
+  <li><b>+ Kart tanımla:</b> banka (listeden), kart adı, kart numarası (şifreli saklanır, ekranda maskeli), limit, hesap kesim günü, son ödeme günü. Bir kez girilir, her ay tekrarlanır.</li>
+  <li>Kartta yalnızca <b>toplam ödeme, asgari ödeme ve son ödeme tarihi</b> görünür; rengi tarihe göre değişir.</li>
+  <li><b>Ekstre gir / Ödeme gir:</b> ekstre girilmemişse ödeme haftasının pazartesi günü hatırlatma gelir; ödeme girilince hatırlatmalar durur.</li>
+  <li>Şahsi ve ticari kartlar ayrı toplamlarla tutulur.</li>
+</ul>
+</div>
+
+<!-- 6. ÜRÜN / STOK -->
+<div class="page">
+<h2>6.1 Ürün &amp; Maliyet</h2>
+<img class="shot" src="kilavuz-gorseller/urun.jpg">
+<ul>
+  <li><b>🔍 Ürün ara</b>, "Alım yap" / "Stok riskinde" filtreleri.</li>
+  <li>Ürüne tıklayınca: Logo giriş/çıkış dökümü, mevcut stok ve durumu, <b>alım noktası / risk seviyesi</b> ayarları, son alış/satış, ağırlıklı ortalama fiyatlar, brüt kâr ve marj (yalnızca gerçek kayıtlardan; varsayıma dayalı tahmini hesaplar gösterilmez).</li>
+  <li><b>Muaf firmalar:</b> <b>Çalışkanlar Kimyevi Maddeler</b> ile yapılan alış ve satışlar maliyete, stoğa ve satış hızına girmez. Liste sayfanın altında yönetilir.</li>
+</ul>
+<h2 style="margin-top:14px">6.2 Stok Eşikleri</h2>
+<img class="shot" src="kilavuz-gorseller/esik.jpg">
+<p><b>Ne işe yarar:</b> 143 ürünün tamamının alım noktası ve risk seviyesini tek tabloda topluca girmek. Grup ve durum filtresi, CSV indirme. Satış hızına dayalı tahminler gösterilmez; yalnızca stok miktarı ve alım/risk durumu.</p>
+</div>
+
+<!-- 7. BİLDİRİM / ASİSTAN / KASA / YETKİ -->
+<div class="page">
+<h2>7.1 WhatsApp Bildirimleri</h2>
+<img class="shot" src="kilavuz-gorseller/wa.jpg">
+<p>Ödeme hatırlatmaları (7 / 3 / 1 gün önce ve ödeme günü), haftalık rapor, nakit açığı, limit, stok ve kart ekstresi uyarıları. Mesajdaki <b>✅ Ödendi / ⏰ Yarın hatırlat</b> düğmeleri. Tam kart numarası WhatsApp'a asla yazılmaz.</p>
+<h2 style="margin-top:14px">7.2 Google Takvim</h2>
+<img class="shot" src="kilavuz-gorseller/takvim.jpg">
+<p><b>Yazım biçimi:</b> takvime ödeme ve tahsilatlarınızı şu biçimde yazabilirsiniz; uygulama da takvime aynı biçimde yazar:<br>
+<b>ÇEK ÖDEME: QNB: AYTAŞ : 84.000 TL: ÇKN.: 0430125</b> · <b>ÇEK TAHSİLAT: YKB: DELTA BOYA: 350.000 TL: ÇKN.: 7700145</b> · <b>KREDİ TAKSİTİ: ŞEKERBANK: TİCARİ KREDİ: 200.427 TL</b><br>
+Sıra esnektir; tür, banka (kısaltmalar da: YKB, İŞ, HALK…), firma, tutar ve çek numarası ayrı ayrı okunur. Çek numarası varsa eşleştirme önce ona göre yapılır.</p>
+<p><b>Anlık ve iki yönlü:</b> uygulamaya girilen ödeme hemen takvime yazılır; takvime yazdığınız ödeme (ör. "Halkbank kredi taksiti 64.500 TL") anında uygulamaya gelir. Takvimde zaten olan ödemeye dokunulmaz; randevu gibi ödeme olmayan etkinlikler yok sayılır; yanlış algılanan "geri al" ile kaldırılır. Gece yedek kontrol yapılır.</p>
+</div>
+<div class="page">
+<h2>7.3 AI Finans Asistanı</h2>
+<img class="shot" src="kilavuz-gorseller/ai.jpg">
+<p>"Bu hafta hangi çekleri ödeyeceğim?", "En son IPA'yı kaça aldık?", "Önümüzdeki 30 gün nakit durumumuz nasıl?" gibi soruları kayıtlara göre yanıtlar ve kaynağını gösterir. Yetkiniz olmayan bilgiyi vermez.</p>
+<h2 style="margin-top:14px">7.4 Yatırım Kasası (özel şifreli)</h2>
+<img class="shot" src="kilavuz-gorseller/kasa.jpg">
+<ul>
+  <li>Uygulama girişinden ayrı, size özel şifreyle açılır; 5 dakika işlem yapılmazsa veya başka ekrana geçilirse kilitlenir.</li>
+  <li>Altın, gümüş, döviz, fon, borsa, TL; <b>kimin</b> (Ercan / Aynil), <b>nerede</b> (fiziki kasa, banka, aracı kurum), tarihli ekleme/çıkış, maliyet, güncel piyasa değeri, kâr/zarar.</li>
+  <li><b>Ercan'ın varlıkları</b> ve <b>Aynil'in varlıkları</b> ayrı tablolarda, her birinin toplamıyla; en altta türe göre <b>genel toplam</b> (Ercan + Aynil), toplam maliyet, kâr/zarar ve kişi payı.</li>
+  <li><b>Şifremi unuttum:</b> WhatsApp doğrulama kodu + şifre belirlerken verilen <b>kurtarma kodu</b>. Kurtarma kodunu güvenli bir yerde saklayın.</li>
+</ul>
+</div>
+<div class="page">
+<h2>7.5 Kullanıcılar &amp; Güvenlik</h2>
+<img class="shot" src="kilavuz-gorseller/yetki.jpg">
+<table>
+  <tr><th>Kullanıcı</th><th>E-posta</th><th>Yetki</th></tr>
+  <tr><td>Ercan Değişmez</td><td>ercan@demirbeykimya.com</td><td>Tam yetki</td></tr>
+  <tr><td>Aynil Değişmez</td><td>aynil@demirbeykimya.com</td><td>Tam yetki</td></tr>
+</table>
+<p>Uygulamayı yalnızca bu iki kişi kullanır; başka kullanıcı eklenmez. Giriş şifre ve WhatsApp doğrulama koduyla yapılır. Yatırım Kasası ayrıca kendi şifresiyle açılır.</p>
+</div>
+
+<!-- 8. BENZER EKRANLAR -->
+<div class="page compact">
+<h2>8. Benzer işler yapan ekranlar ve sadeleştirme önerisi</h2>
+<p>Bazı ekranlar aynı veriyi farklı açıdan gösteriyor. Aşağıdaki tablo hangisini ne zaman kullanacağınızı ve birleştirilebilecekleri gösterir.</p>
+<table>
+  <tr><th style="width:24%">Benzer görünen ekranlar</th><th style="width:38%">Farkı</th><th>Öneri</th></tr>
+  <tr><td>Ana Panel · Raporlar · Nakit Akışı</td><td>Panel: 30 günün özeti. Raporlar: haftalık / aylık / yıllık listeler. Nakit akışı: 7–180 gün bakiye tahmini.</td><td>Tek <b>"Özet"</b> menüsünde 3 sekme. Nakit Akışı, Panel'in içine "detay" sekmesi olarak alınabilir.</td></tr>
+  <tr><td>Çek Takibi · Raporlar (iskonto/teminat çekleri)</td><td>Çek Takibi tüm çekler; Raporlar yalnızca o hafta / ayınkiler.</td><td>Ayrı kalmalı; Raporlar'daki iskonto/teminat tablosu Çek Takibi'ne bağlantı olabilir.</td></tr>
+  <tr><td>Bankalar &amp; Limitler · Banka Kredileri · Finansman Giderleri</td><td>Limitler: ne kadar kullanabilirim. Krediler: ne zaman ne ödeyeceğim. Finansman giderleri: bunun bana maliyeti ne.</td><td><b>Birleştirme önerisi:</b> tek <b>"Bankalar"</b> menüsü, içinde Limitler / KMH / Krediler / Finansman giderleri sekmeleri.</td></tr>
+  <tr><td>Ürün &amp; Maliyet · Stok Eşikleri</td><td>Aynı stok verisi. Ürün: tek ürünün derin analizi. Eşikler: 143 ürünün toplu ayarı.</td><td><b>Birleştirme önerisi:</b> Stok Eşikleri, Ürün &amp; Maliyet içinde "Toplu eşik ayarı" sekmesi olsun.</td></tr>
+  <tr><td>Müşteri Limit &amp; Risk · Tedarikçi Ödemeleri</td><td>Müşteri: alacak tarafı (bize borçlu). Tedarikçi: borç tarafı (bizim borcumuz).</td><td>Ayrı kalmalı; menüde <b>"Cariler"</b> başlığı altında yan yana durabilir.</td></tr>
+  <tr><td>WhatsApp Bildirim · Google Takvim</td><td>İkisi de bildirim kanalı; veri üretmez.</td><td><b>Birleştirme önerisi:</b> tek <b>"Bildirimler"</b> menüsü (WhatsApp ve Takvim sekmeleri).</td></tr>
+  <tr><td>Kredi Kartları · Banka Kredileri</td><td>Kart: aylık ekstre. Kredi: taksit planı.</td><td>Ayrı kalmalı (şahsi/ticari ayrımı kartlarda önemli).</td></tr>
+</table>
+<h3>Önerilen sade menü (17 ekran → 10 başlık)</h3>
+<table>
+  <tr><th>Menü</th><th>İçindekiler</th></tr>
+  <tr><td>Özet</td><td>Ana Panel · Raporlar (haftalık · aylık · yıllık) · Nakit Akışı</td></tr>
+  <tr><td>Çekler</td><td>Çek Takibi</td></tr>
+  <tr><td>Cariler</td><td>Müşteri Limit &amp; Risk (vade analizi, proforma) · Tedarikçi Ödemeleri</td></tr>
+  <tr><td>Bankalar</td><td>Limitler &amp; Findeks · Hesaplar &amp; KMH · Krediler · Finansman giderleri &amp; alacak zararları</td></tr>
+  <tr><td>Kredi Kartları</td><td>Şahsi · Ticari · Birleşik takvim</td></tr>
+  <tr><td>Ürün &amp; Stok</td><td>Ürün analizi · Toplu eşik ayarı · Muaf firmalar</td></tr>
+  <tr><td>Bildirimler</td><td>WhatsApp · Google Takvim</td></tr>
+  <tr><td>AI Asistan</td><td>—</td></tr>
+  <tr><td>Yatırım Kasası</td><td>(özel şifre)</td></tr>
+  <tr><td>Ayarlar</td><td>Kullanıcılar &amp; güvenlik · Firma bilgileri · Muaf firmalar · Logo bağlantısı</td></tr>
+</table>
+<div class="note">Bu birleştirmeyi onaylarsanız menü bu yapıya göre düzenlenir; ekranların işlevi değişmez, sadece yerleri ve gruplanmaları değişir.</div>
+</div>
+
+<!-- 9. VERİLER -->
+<div class="page">
+<h2>9. Prototipteki gerçek ve örnek veriler</h2>
+<table>
+  <tr><th style="width:40%">Gerçek (sizin verdiğiniz veya resmi kaynak)</th><th>Örnek (canlıda Logo GO 3'ten veya sizin girişinizden gelecek)</th></tr>
+  <tr><td>
+    <ul>
+      <li>Firma bilgileri (unvan, adres, vergi no)</li>
+      <li>6 ticari banka hesabı ve IBAN'ları</li>
+      <li>Findeks 09.10.2026 banka limit / risk tablosu</li>
+      <li>www.demirbeykimya.com ürün kataloğu (141 ürün)</li>
+      <li>Logo ve marka renkleri</li>
+      <li>TCMB 16.10.2026 döviz kurları</li>
+    </ul></td>
+  <td>
+    <ul>
+      <li>Çekler, cari bakiyeler, faturalar, müşteri/tedarikçi adları</li>
+      <li>Stok miktarları, satış ve alış fiyatları</li>
+      <li>Hesap bakiyeleri, KMH limitleri</li>
+      <li>Kredi kartları, krediler, taksitler</li>
+      <li>Finansman giderleri ve alacak zararları kayıtları</li>
+      <li>Yatırım kasası varlıkları, altın fiyatları</li>
+    </ul></td></tr>
+</table>
+<h3>Kurulum gereksinimleri</h3>
+<table>
+  <tr><th style="width:26%">Bağlantı</th><th>Gerekenler</th></tr>
+  <tr><td><b>WhatsApp Business API</b></td><td>Meta Business hesabı, şirkete ait WhatsApp numarası, onaylı mesaj şablonları (ödeme hatırlatma, haftalık rapor, doğrulama kodu). Kasa şifresi sıfırlanırken <b>şifre değil</b>, kayıtlı numaraya tek kullanımlık doğrulama kodu gönderilir.</td></tr>
+  <tr><td><b>Google Takvim (OAuth)</b></td><td>Google Cloud projesi, Takvim API'sinin açılması, OAuth onay ekranı; yalnızca seçilen takvim için izin. Anlık bildirim için sunucunun internetten erişilebilir HTTPS adresi.</td></tr>
+  <tr><td><b>Logo GO 3</b></td><td>Salt okunur SQL kullanıcısı (Dokumanlar/SQL), sunucunun Logo veritabanına ağ erişimi.</td></tr>
+  <tr><td><b>Altın fiyatları</b></td><td>Harem Altın'dan izin / API anlaşması veya lisanslı bir piyasa verisi sağlayıcısı.</td></tr>
+</table>
+<h3>Canlıya geçiş adımları</h3>
+<ol>
+  <li>Logo GO 3 sunucusunda salt okunur SQL kullanıcısının açılması ve keşif betiğinin çalıştırılması (Dokumanlar/SQL).</li>
+  <li>Sunucunun (ASP.NET Core) şirket ağında kurulması; Windows, Mac ve iPad uygulamalarının ona bağlanması.</li>
+  <li>WhatsApp Business ve Google Takvim bağlantılarının onaylanması.</li>
+  <li>Kart, KMH, limit ve eşiklerin ilk girişi; ilk Findeks raporunun yüklenmesi.</li>
+</ol>
+<div class="warn">Güvenlik: Kart numaraları ve yatırım kasası verileri şifreli saklanır. CVV ve kart şifresi hiçbir zaman istenmez. WhatsApp, rapor ve loglarda yalnızca kartın son 4 hanesi yer alır.</div>
+</div>
+
+</body>
+</html>
