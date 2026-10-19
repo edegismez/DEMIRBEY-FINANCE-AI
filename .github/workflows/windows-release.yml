@@ -1,0 +1,45 @@
+name: Windows Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: Release tag to build and attach installers to
+        required: true
+        default: V1.0.0
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Check out release source
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.tag_name || github.event.release.tag_name || github.ref }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: Ortak-Uygulama-Kodu
+
+      - name: Build and attach Windows installers
+        uses: tauri-apps/tauri-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          projectPath: Ortak-Uygulama-Kodu
+          tagName: ${{ inputs.tag_name || github.event.release.tag_name }}
+          releaseDraft: false
+          prerelease: false
