@@ -12,3 +12,6 @@ _gecici/
 .claude/
 *.zip
 Logo-Kesif-*/
+target/
+*.tsbuildinfo
+Ortak-Uygulama-Kodu/src-tauri/gen/
